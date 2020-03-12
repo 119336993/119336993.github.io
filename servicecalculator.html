@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <TITLE>Strategic Consultancy Services</TITLE>
+
+
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Una Murphy Strategic Consultancy</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	</head>
+   <HEAD>
+    <TITLE>Strategic Consultancy Services</TITLE>
+  <SCRIPT>
+    function Calculate() {
+     var cost=0;
+    if (document.priceForm.ConsultancyType[0].checked==true) //Document Object Model (DOM) address
+             cost = 200;
+             if (document.priceForm.ConsultancyType[1].checked==true) 
+             cost = 500;
+    else
+             cost = 1000; 
+    if(document.priceForm.discount.checked==true)
+             cost = cost * 0.95; 
+    if(document.priceForm.vat.checked==true)
+             cost = cost *1.2 ; 
+     DisplayPrice(cost);
+    } //End of Calculate – ALL local vars e.g. cost are distroyed
+
+   function DisplayPrice(y) {
+      alert("Total Price: "+ y +" Euro");
+   } //End of DisplayPrice – parm var y is distroyed
+
+   </SCRIPT>
+
+ </HEAD>
+<BODY>
+<header>
+		<div class="container">
+			<div id="company-name">
+				<h2 align="left-side" id="nav-heading">Una Murphy Strategic Consultancy</h2>
+			</div>
+			<nav>
+				<ul>
+					<li class="active-page"><a href="indexhtml">Home</a></li>
+					<li><a href="aboutme.html">About Me</a></li>
+					<li><a href="education.html">Education</a></li>
+					<li><a href="workexperience.html">Work Experience</a></li>
+					<li><a href="interests.html">Interests</a></li>
+					<li><a href="aboutconsultancy.html">About Consulting</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="contactme.html">Contact Me</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+   <center>
+   <form name=priceForm>
+   <table border="1">
+      <tr>
+        <th>DESCRIPTION</th>  <th>COST</th>
+      </tr>
+      <tr>
+        <td><input type="radio" name="ConsultancyType" value="A" checked>Hyperautomation</td>
+        <td>200 Euro</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="ConsultancyType" value="B">Multiexperience</td>
+        <td>500 Euro</td>
+      </tr>
+	  <tr>
+        <td><input type="radio" name="ConsultancyType" value="C">Distributed Cloud</td>
+        <td>1000 Euro</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="discount">5% discount</td>
+        <td>-5%</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="vat">VAT @ 20%</td>
+        <td>+20%</td>
+      </tr>
+      <tr>
+        <td colspan="2"><center><input type="button" onClick="Calculate()" value="Calculate Total Price" name="calc"></center></td>
+      </tr>
+   </table>
+   </form>
+   </center>
+   </BODY>
+   
+ <footer>
+		<div class="container">
+			<p class="copyright-section">Created by Una Murphy 2020 &copy; All rights reserved.<br><br>Email:<a href="mailto:unamurphy@email.com">unamurphy@email.com</a> for any inqueries</p>
+		</div>
+	</footer>
+   
+</html>
